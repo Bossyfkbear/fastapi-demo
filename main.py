@@ -8,3 +8,7 @@ app = FastAPI()
 def read_root():
     html_file = Path("templates/index.html")
     return html_file.read_text(encoding="utf-8")
+
+@app.get("/api")
+def get_data():
+    return {"message": "Hello World"}

@@ -10,6 +10,15 @@
 
     <p>這是我用 HTML 做的第一個網頁。</p>
 
-    <button>按我</button>
+<button onclick="getData()">取得 API 資料</button>
+
+    <script>
+    alert("你好！這是 JavaScript！");
+        async function getData() {
+    const response = await fetch("/api");
+    const data = await response.json();
+    alert(data.message);
+}
+    </script>
 </body>
 </html>
